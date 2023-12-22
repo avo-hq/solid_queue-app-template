@@ -1,0 +1,35 @@
+<div class="flex-1 flex-initial mt-4 overflow-auto">
+  <table class="w-full">
+    <tbody class="divide-y">
+      <% @card.queues.each do |queue| %>
+        <%
+          status = queue.paused? ? :paused : :running
+          label = status == :paused ? :resume : :pause
+        %>
+        <tr class="hover:bg-blue-50">
+          <td class="px-1 py-1">
+            <div class="ml-3">
+              <%= queue.name %> -
+            <%= queue.size %> <%= "job".pluralize queue.size %>
+            </div>
+          </td>
+          <td class="px-1 py-1 text-sm text-right">
+            <div class="mr-3 flex justify-end gap-2">
+              <%= render Avo::Fields::Common::BadgeViewerComponent.new value: status, options: {success: :running, warning: :paused} %>
+            </div>
+          </td>
+          <td class="text-sm text-right">
+            <div class="mr-3">
+              <%= a_link avo.queue_visibility_path(name: queue.name, queue_action: label, frame_url: @card.frame_url), data: {turbo_method: :put}, size: :xs do %>
+                <%= label.to_s.humanize %>
+              <% end %>
+              <%= a_link avo.queue_clear_path(name: queue.name, queue_action: label, frame_url: @card.frame_url), data: {turbo_method: :put, turbo_confirm: "Are you sure you want to delete all jobs from this queue?"}, size: :xs, color: :red do %>
+                Clear queue
+              <% end %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

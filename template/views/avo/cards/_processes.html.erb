@@ -1,0 +1,25 @@
+<div class="flex-1 flex-initial mt-4 overflow-auto">
+  <table class="w-full">
+    <tbody class="divide-y">
+      <% @card.processes.each do |process| %>
+        <tr class="hover:bg-blue-50">
+          <td class="px-1 py-1">
+            <div class="ml-3">
+              <%= process.kind %>
+            </div>
+          </td>
+          <td class="px-1 py-1 text-sm text-right">
+            <div class="mr-3 flex justify-end gap-2">
+              <%= process.metadata %>
+            </div>
+          </td>
+          <td class="text-sm text-right">
+            <div class="mr-3">
+              <%= process.last_heartbeat_at %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

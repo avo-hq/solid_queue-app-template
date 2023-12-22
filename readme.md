@@ -24,8 +24,8 @@
 
 ## Screenshots
 
-![](./dashboard.png)
-![](./failed_executions.png)
-![](./jobs.png)
-![](./processes.png)
+![](./screenshots/dashboard.png)
+![](./screenshots/failed_executions.png)
+![](./screenshots/jobs.png)
+![](./screenshots/processes.png)
 

@@ -1,11 +1,10 @@
 # Avo 3 Solid Queue template
 
-## What's happening?
+## How to
 
-<!-- 1. Add to the `Gemfile`. Possibly to show a choice for `avo`, `pro` or `advanced`. `gem "avo", ">= 3.0.1.beta4", source: "https://packager.dev/avo-hq"`
-1. Run `bundle install`
-1. Add the route `mount Avo::Engine, at: Avo.configuration.root_path`
-1. Copy the `template` files -->
+1. Add Avo to your app.
+2. Apply this template
+3. Manually add the `main_menu` items in the `avo.rb` initializer
 
 ### Add this to your `avo.rb` initializer
 
@@ -23,4 +22,10 @@
   }
 ```
 
+## Screenshots
+
+![](./dashboard.png)
+![](./failed_executions.png)
+![](./jobs.png)
+![](./processes.png)
 

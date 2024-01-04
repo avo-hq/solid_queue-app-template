@@ -2,7 +2,7 @@ class Avo::Resources::SolidQueueFailedExecution < Avo::BaseResource
   self.includes = []
   self.model_class = "SolidQueue::FailedExecution"
   self.authorization_policy = SolidQueue::FailedExecutionPolicy
-  TITLE_BLOCK = -> { "#{record.job.class_name} - #{record&.error.fetch("exception_class")} \"#{record&.error.fetch("message")}\"" }
+  TITLE_BLOCK = -> { "#{record.job.class_name} - #{record&.error.fetch("exception_class")} '#{record&.error&.fetch("message")}'" }
   self.title = TITLE_BLOCK
 
   self.row_controls = -> {

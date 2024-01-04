@@ -11,6 +11,18 @@ class SolidQueue::FailedExecutionPolicy < ApplicationPolicy
     true
   end
 
+  def create?
+    false
+  end
+
+  def update?
+    false
+  end
+
+  def destroy?
+    false
+  end
+
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve

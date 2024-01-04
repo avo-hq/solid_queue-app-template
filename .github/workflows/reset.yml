@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: Reset cache
       run: |
-        curl -X GET "https://v3.avohq.io/templates/reset?secret=${{secrets.GH_API_SECRET}}&repo=${{env.GITHUB_REPOSITORY}}"
+        curl -X GET "https://v3.avohq.io/templates/reset?secret=${{secrets.GH_API_SECRET}}&repo=${{vars.GITHUB_REPOSITORY}}"

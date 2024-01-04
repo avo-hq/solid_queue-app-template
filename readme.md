@@ -28,4 +28,3 @@
 ![](./screenshots/failed_executions.png)
 ![](./screenshots/jobs.png)
 ![](./screenshots/processes.png)
-

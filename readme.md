@@ -11,7 +11,7 @@
 ```ruby
   config.main_menu = -> {
     section "Dashboards", icon: "dashboards" do
-      all_dashboards
+      dashboard :solid_queue
     end
 
     section "Solid Queue", icon: "queue-list" do

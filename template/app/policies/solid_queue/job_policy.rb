@@ -12,7 +12,7 @@ class SolidQueue::JobPolicy < ApplicationPolicy
   end
 
   def destroy?
-   true
+    true
   end
 
   def create_failed_execution?

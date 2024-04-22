@@ -1,4 +1,4 @@
-class Avo::Scopes::Paused < Avo::Pro::Scopes::BaseScope
+class Avo::Scopes::Paused < Avo::Advanced::Scopes::BaseScope
   self.name = "Paused"
   self.description = "Paused"
   self.scope = -> { query.all }
